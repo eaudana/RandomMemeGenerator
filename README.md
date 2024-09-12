@@ -10,7 +10,7 @@ A simple meme generator application that fetches memes from an API, displays a r
 
 ## Technologies Used
 
-- **Frontend**: React
+- **Frontend**: React, CSS
 - **HTTP Client**: Axios
 
 
