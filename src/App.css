@@ -1,0 +1,17 @@
+*{
+  box-sizing:border-box;
+}
+
+
+body{
+  font-family: "Karla",sans-serif;
+  margin:0;
+  background-color: #dee2ff;
+}
+
+/* .header{
+  display: flex;
+  align-items: center;
+  height:65px;
+  background: linear-gradient(90deg,#000969 1.18%, #6fbffc 100%);;
+} */

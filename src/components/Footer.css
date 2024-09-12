@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #000969 1.18%, #6fbffc 100%);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+img {
+  height: 20px;
+  margin-top: 7px;
+  margin-right: 10px;
+  }
+
+  a:hover{
+    color: rgb(5, 0, 50);
+  }

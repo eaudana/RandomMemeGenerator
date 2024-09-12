@@ -1,0 +1,50 @@
+.form {
+  display: grid;
+  grid-template-rows: 40px auto; /* Adjust rows to fit button and content */
+  grid-template-columns: 1fr; /* Single column layout */
+  gap: 17px;
+  justify-items: center; /* Center items horizontally */
+}
+
+.form-button {
+  grid-column: 1; /* Ensure the button spans the full width of the grid */
+  border-radius: 7px;
+  border: 1px solid #d5d4db;
+  background:  #000969;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: large;
+  width: 300px; /* Set a fixed width for the button */
+}
+
+
+.form button:hover{
+background:  linear-gradient(90deg, #000969 1.18%, #6fbffc 100%);
+}
+
+.meme-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Center text and image within the container */
+}
+
+main {
+  padding: 36px;
+  display: flex;
+  justify-content: center; /* Center the form within the main section */
+}
+
+.form img {
+  border-radius: 7px;
+}
+
+.download-button {
+  cursor: pointer;
+  font-size: large;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #6fbffc  ;
+}
