@@ -1,4 +1,4 @@
-##Random Meme Generator
+## Random Meme Generator
 
 A simple meme generator application that fetches memes from an API, displays a random meme each time the "Generate Meme" button is clicked, and allows the user to download the meme.
 
