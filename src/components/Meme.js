@@ -2,8 +2,6 @@ import "./Meme.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-
-
 export default function Meme() {
   const [memes, setMemes] = useState([]);
   const [currentMeme, setCurrentMeme] = useState(null);
@@ -28,21 +26,24 @@ export default function Meme() {
     }
   }
 
-  // function downloadMeme() {
-  //   if (currentMeme) {
-  //     const link = document.createElement('a');
-  //     link.href = currentMeme.url;
-  //     link.download = currentMeme.name;
-  //     link.click();
-  //   }
-  // }
 
   async function downloadMeme() {
     if (currentMeme) {
       try {
-        const response = await axios.get(currentMeme.url, { responseType: 'blob' });
-        const blob = new Blob([response.data], { type: response.headers['content-type'] });
-        const link = document.createElement('a');
+        /*This line makes an HTTP request to get data from currentMeme.url. The await keyword tells JavaScript to wait until the data is received. The response is expected in the form of a "blob" (which is binary data, like an image or file).
+
+ */
+        const response = await axios.get(currentMeme.url, {
+          responseType: "blob",
+        });
+
+        //This creates a new Blob object from the response.data (the downloaded file) and specifies its type (like "image/jpeg") using the content type provided in the server's response headers.
+        const blob = new Blob([response.data], {
+          type: response.headers["content-type"],
+        });
+        const link = document.createElement("a");
+
+        //This converts the Blob data into a URL that can be used as the href for the link element, allowing it to point to the downloaded file.
         link.href = window.URL.createObjectURL(blob);
         link.download = `${currentMeme.name}.jpg`;
         link.click();
@@ -52,10 +53,12 @@ export default function Meme() {
       }
     }
   }
-  
+
   return (
     <div className="form">
-      <button className="form-button" onClick={generateMeme}>Generate Meme</button>
+      <button className="form-button" onClick={generateMeme}>
+        Generate Meme
+      </button>
       {currentMeme && (
         <div className="meme-container">
           <h3>{currentMeme.name}</h3>
@@ -64,7 +67,9 @@ export default function Meme() {
             alt={currentMeme.name}
             style={{ width: "300px", height: "auto" }}
           />
-           <button className="download-button" onClick={downloadMeme}>Download Meme</button>
+          <button className="download-button" onClick={downloadMeme}>
+            Download Meme
+          </button>
         </div>
       )}
     </div>
